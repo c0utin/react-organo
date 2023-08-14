@@ -1,11 +1,11 @@
-import './Banner.css'
+import './Banner.css';
 
 const Banner = () => {
   return (
     <header className="banner">
        <img src="/images/banner.png" alt="Principle banner of Organo"/>
     </header>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

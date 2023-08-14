@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Team from './components/Team';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -46,7 +47,6 @@ function App() {
   const [employees, setEmployees] = useState([])
 
   const whenRegistredEmployee = (employee) => {
-    console.log(employee)
     setEmployees([...employees, employee])
   }
 
@@ -61,6 +61,7 @@ function App() {
         colorSecundary={team.colorSecundary}
         employees={employees.filter(employee => employee.team === team.name)} 
       />)}
+      <Footer />
     </div>
   );
 }

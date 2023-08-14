@@ -1,10 +1,10 @@
 import './Employeer.css'
 
-const Employeer = ({ name, image, office }) => {
+const Employeer = ({ name, image, office, backgroundColorCard }) => {
 
   return (
     <div className='employeer'>
-      <div className='title'>
+      <div className='title'style={{ backgroundColor: backgroundColorCard }}>
         <img src={image} alt={name} />
       </div>
       <div className='baseboard'>

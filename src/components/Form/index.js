@@ -19,10 +19,6 @@ const Form = (props) => {
       image,
       team 
     })
-    setName('')
-    setOffice('')
-    setImage('')
-    setTeam('')
   }
 
   return(
