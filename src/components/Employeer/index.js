@@ -1,9 +1,10 @@
 import './Employeer.css'
 
-const Employeer = ({ name, image, office, backgroundColorCard }) => {
+const Employeer = ({ name, image, office, backgroundColorCard, onDelete }) => {
 
   return (
     <div className='employeer'>
+      <div className='delete'onClick={onDelete} >Delete</div>
       <div className='title'style={{ backgroundColor: backgroundColorCard }}>
         <img src={image} alt={name} />
       </div>

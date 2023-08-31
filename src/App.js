@@ -46,6 +46,10 @@ function App() {
 
   const [employees, setEmployees] = useState([])
 
+  function deleteEmployee() {
+    console.log('employee deleted')
+  };
+
   const whenRegistredEmployee = (employee) => {
     setEmployees([...employees, employee])
   }
@@ -54,12 +58,14 @@ function App() {
     <div className="App">
       <Banner />
       <Form teams={teams.map(team => team.name)} registredEmprloyee={employee => whenRegistredEmployee(employee)}/>
-      {teams.map(team => <Team 
-        key={team.name} 
+      {teams.map((team, index) => <Team 
+        key={index} 
         name={team.name} 
+        team={team}
         colorPrimary={team.colorPrimary} 
         colorSecundary={team.colorSecundary}
         employees={employees.filter(employee => employee.team === team.name)} 
+        onDelete={deleteEmployee}
       />)}
       <Footer />
     </div>
